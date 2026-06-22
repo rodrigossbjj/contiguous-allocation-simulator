@@ -48,10 +48,10 @@ class FragmentationMetrics:
         """Consolida contagens e taxas do estado atual do disco."""
         free_blocks = self.get_free_space()
         return {
-            "total_blocks": self.disk.total_blocks,
-            "used_blocks": self.disk.total_blocks - free_blocks,
-            "free_blocks": free_blocks,
-            "largest_free_region": self.get_largest_free_region(),
-            "occupancy_rate": self.calculate_occupancy_rate(),
-            "external_fragmentation": self.calculate_external_fragmentation(),
+            "Total de Blocos": self.disk.total_blocks,
+            "Blocos Ocupados": self.disk.total_blocks - free_blocks,
+            "Blocos Livres": free_blocks,
+            "Maior Região Livre": self.get_largest_free_region(),
+            "Taxa de Ocupação": self.calculate_occupancy_rate(),
+            "Fragmentação Externa": self.calculate_external_fragmentation(),
         }
